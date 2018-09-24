@@ -7,5 +7,6 @@ typedef TouchableProps = {
 	> Props,
 	?children:ReactSingleFragment,
 	?onPress:Function,
+	?onPressIn:Function,
 	?style:ViewStyle,
 }
