@@ -2,8 +2,8 @@ package react.native.component.props;
 
 import haxe.Constraints;
 import haxe.extern.EitherType;
-import react.component.props.Props;
 import enums.Enums;
+import react.ReactComponent.ReactFragment;
 
 typedef ViewProps = {
 	> ViewPropsWithoutStyle,
@@ -11,7 +11,7 @@ typedef ViewProps = {
 }
 typedef ViewPropsWithoutStyle = {
 	> Props,
-	?accessibilityLabel:Node,
+	?accessibilityLabel:ReactFragment,
 	?accessible:Bool,
 	?hitSlop:{top:Int, left:Int, bottom:Int, right:Int},
 	?onAccessibilityTap:Function,

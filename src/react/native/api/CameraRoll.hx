@@ -64,7 +64,7 @@ abstract NodeType(String) to String {
 			default: this;
 		}
 	}
-	
+
 	@:to public function asEnum():SaveType {
 		return switch this {
 			#if ios

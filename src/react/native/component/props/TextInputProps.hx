@@ -3,6 +3,7 @@ package react.native.component.props;
 import haxe.Constraints;
 import haxe.extern.EitherType;
 import enums.Enums;
+import react.ReactComponent.ReactFragment;
 
 typedef TextInputProps = {
 	> ViewProps.ViewPropsWithoutStyle,
@@ -26,7 +27,7 @@ typedef TextInputProps = {
 	?onScroll:Function,
 	?onSelectionChange:Function,
 	?onSubmitEditing:Function,
-	?placeholder:Node,
+	?placeholder:ReactFragment,
 	?placeholderTextColor:Color,
 	?returnKeyType:Enums<'done', 'go', 'next', 'search', 'send', 'none', 'previous', 'default', 'emergency-call', 'google', 'join', 'route', 'yahoo'>,
 	?secureTextEntry:Bool,

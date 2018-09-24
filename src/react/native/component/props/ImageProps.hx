@@ -2,8 +2,8 @@ package react.native.component.props;
 
 import haxe.Constraints;
 import haxe.extern.EitherType;
-import react.component.props.Props;
 import enums.Enums;
+import react.ReactComponent.ReactFragment;
 
 typedef ImageProps = {
 	> Props,
@@ -20,7 +20,7 @@ typedef ImageProps = {
 	// android
 	?resizeMethod:Enums<'auto', 'resize', 'scale'>,
 	// ios
-	?accessibilityLabel:Node,
+	?accessibilityLabel:ReactFragment,
 	?accessible:Bool,
 	?blurRadius:Float,
 	?capInsets:{top:Float, left:Float, bottom:Float, right:Float},

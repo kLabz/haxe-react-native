@@ -7,15 +7,15 @@ using haxe.macro.Tools;
 
 @:jsRequire("react-native", "StyleSheet")
 extern class StyleSheet {
-	
+
 	static var hairlineWidth:Dynamic;
 	static var absoluteFill:Dynamic;
 	static var absoluteFillObject:Dynamic;
-	
+
 	@:native('create') @:noCompletion static function _create<T>(obj:T):T;
-	
+
 	static inline macro function create(e:Expr):ExprOf<Dynamic<Int>> {
-		
+
 		var exprs = new Map<String, Expr>();
 		switch e.expr {
 			case EObjectDecl(fields):
@@ -35,15 +35,15 @@ extern class StyleSheet {
 					}
 					var expr = macro @:pos(field.expr.pos) (${field.expr}:$ct);
 					exprs[field.field] = field.expr = expr;
-					
+
 					// HACK: this makes quick-enums ready
 					try Context.typeof(expr) catch(e:Dynamic) {}
 				}
 			case _:
 				Context.error('Expected object literal', e.pos);
 		}
-		
-		
+
+
 		return macro react.native.api.StyleSheet._create($e);
 	}
 }

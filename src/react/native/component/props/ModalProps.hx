@@ -2,7 +2,6 @@ package react.native.component.props;
 
 import haxe.Constraints;
 import enums.Enums;
-import react.component.props.Props;
 
 typedef ModalProps = {
 	> Props,
